@@ -17,10 +17,10 @@ class HomeHeader extends StatelessWidget {
         ),
       ),
       child: Column(
-      children: [
-        HomeHeaderAppBar(),
-        HomeHeaderForm(),
-      ],
+        children: [
+          HomeHeaderAppBar(),
+          HomeHeaderForm(),
+        ],
       ),
     );
   }
