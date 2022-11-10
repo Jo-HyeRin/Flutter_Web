@@ -16,6 +16,7 @@ class HomeBody extends StatelessWidget {
         child: Column(
           children: [
             HomeBodyBanner(),
+            SizedBox(height: gap_m),
             HomeBodyPopular(),
           ],
         ),
