@@ -88,7 +88,7 @@ class HomeBodyPopularItem extends StatelessWidget {
         CircleAvatar(
           backgroundImage: AssetImage("assets/p1.jpeg"),
         ),
-        SizedBox(height: gap_s),
+        SizedBox(width: gap_s),
         Column(
           children: [
             Text("데어", style: subtitle1(),),

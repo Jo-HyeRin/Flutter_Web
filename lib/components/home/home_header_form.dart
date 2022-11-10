@@ -9,24 +9,28 @@ class HomeHeaderForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment(-0.6, 0),
-      child: Container(
-        width: 420,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Form(
-          child: Padding(
-            // 나중에 지울지도. 커먼폼필드 작업 시 확인하기 쉽게 패딩을 준다.
-            padding: const EdgeInsets.all(gap_l),
-            child: Column(
-              children: [
-                _buildFormTitle(),
-                _buildFormField(),
-                _buildFormSubmit(),
-              ],
+    double screenWidth = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: const EdgeInsets.only(top: gap_m),
+      child: Align(
+        alignment: screenWidth < 520 ? Alignment(0, 0) : Alignment(-0.6, 0),
+        child: Container(
+          width: 420,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Form(
+            child: Padding(
+              // 나중에 지울지도. 커먼폼필드 작업 시 확인하기 쉽게 패딩을 준다.
+              padding: const EdgeInsets.all(gap_l),
+              child: Column(
+                children: [
+                  _buildFormTitle(),
+                  _buildFormField(),
+                  _buildFormSubmit(),
+                ],
+              ),
             ),
           ),
         ),
